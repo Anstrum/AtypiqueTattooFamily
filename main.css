@@ -1,19 +1,24 @@
-html {
-    overflow:hidden;
 
-}
+ /*==========\
+| Main design |
+ \==========*/
 *{
     font-family: 'Dancing Script', cursive;
     margin:0;
     padding:0;
+    user-select:none;
 }
-
 body {
+    overflow: hidden; /*to remove when creating other versions */
     font-size:25px;
     background-color: rgb(10, 4, 4);
     color:rgb(172, 111, 42);
 }
 
+
+ /*============================\
+| Header (Logo and Description) |
+ \============================*/
 .head {
     display:flex;
     flex-direction: row;
@@ -23,9 +28,7 @@ body {
     max-width: 800px;
     margin:auto;
     padding-right: 20px;
-    user-select: none;
 }
-
 .mainLogo {
     max-width: 500px;
     display:block;
@@ -34,7 +37,37 @@ body {
 }
 
 
+ /*========\
+| Caroussel |
+ \========*/
+.caroussel{
+    width: 90%;
+    margin: auto;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 100px;
+}
+.slideshow{
+    margin: auto;
+    height: 200px;
+    display:flex;
+}
+.caroussel-picture{
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 200px;
+}
+.caroussel-picture:hover{
+    z-index: 100;
+    border: 50px red solid;
+    transition: border 0.5s;
+}
+
+ /*================\
+| Users description |
+ \================*/
 .users-desc{
+    z-index: -1;
     overflow: hidden;
     position: fixed;
     width:100%;
@@ -43,7 +76,6 @@ body {
     bottom:0;
     justify-content: space-around;
 }
-
 .user-desc{
     position: relative;
     bottom: -500px;
@@ -55,20 +87,21 @@ body {
 
     transition: bottom 0.2s;
 }
-
-#desc1:hover {
+#desc1:hover, .users-desc {
+    z-index: auto;
     bottom:0;
     transition: bottom 0.5s;
 }
 #desc2:hover {
+    z-index: auto;
     bottom:0;
     transition: bottom 0.5s;
 }
 #desc3:hover {
+    z-index: auto;
     bottom:0;
     transition: bottom 0.5s;
 }
-
 .user-desc h1 {
     padding-top: 5px;
     padding-bottom: 5px;
