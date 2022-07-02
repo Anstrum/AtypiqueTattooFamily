@@ -41,6 +41,7 @@ body {
 | Caroussel |
  \========*/
 .caroussel{
+    z-index: 0;
     width: 90%;
     margin: auto;
     position: fixed;
@@ -53,32 +54,40 @@ body {
     display:flex;
 }
 .caroussel-picture{
+    position:relative;
+    top:0px;
     margin-left: 5px;
     margin-right: 5px;
     height: 200px;
+    left:0px;
+    transition: all 0.2s;
 }
 .caroussel-picture:hover{
-    z-index: 100;
-    border: 50px red solid;
-    transition: border 0.5s;
+    height:400px;
+    top:-200px;
+    transition: all 0.5s; 
 }
+
 
  /*================\
 | Users description |
  \================*/
 .users-desc{
-    z-index: -1;
-    overflow: hidden;
+    z-index: 50000 !important;
+
+    background-color:rgb(12, 5, 5) ;
+    overflow:visible;
     position: fixed;
     width:100%;
     display: flex;
     flex-direction: row;
     bottom:0;
+    height:100px;
     justify-content: space-around;
 }
 .user-desc{
-    position: relative;
-    bottom: -500px;
+    position:relative;
+    bottom: 0px;
     border:2px black solid;
     border-radius: 20px 20px 0px 0px;
     text-align: center;
@@ -87,19 +96,16 @@ body {
 
     transition: bottom 0.2s;
 }
-#desc1:hover, .users-desc {
-    z-index: auto;
-    bottom:0;
+#desc1:hover {
+    bottom:500px;
     transition: bottom 0.5s;
 }
 #desc2:hover {
-    z-index: auto;
-    bottom:0;
+    bottom:500px;
     transition: bottom 0.5s;
 }
 #desc3:hover {
-    z-index: auto;
-    bottom:0;
+    bottom:500px;
     transition: bottom 0.5s;
 }
 .user-desc h1 {
