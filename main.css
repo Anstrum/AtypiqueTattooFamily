@@ -1,3 +1,14 @@
+ /*=====\
+| Colors |
+ \=====*/
+
+:root{
+    --title-color:rgb(172, 111, 42);
+    --main-text-color:rgb(219, 190, 155);
+    --background-color:rgb(10, 4, 4);
+}
+
+
 
  /*==========\
 | Main design |
@@ -11,8 +22,8 @@
 body {
     overflow: hidden; /*to remove when creating other versions */
     font-size:25px;
-    background-color: rgb(10, 4, 4);
-    color:rgb(172, 111, 42);
+    background-color: var(--background-color);
+    color: var(--main-text-color);
 }
 
 
@@ -20,20 +31,18 @@ body {
 | Header (Logo and Description) |
  \============================*/
 .head {
-    display:flex;
-    flex-direction: row;
-    margin-top:10px;
+    width:600px;
 }
 .description {
-    max-width: 800px;
-    margin:auto;
+    margin-top:10px;
+    margin-left: 20px;
     padding-right: 20px;
+    padding-left: 20px;
+    color: var(--main-text-color);
 }
 .mainLogo {
-    max-width: 500px;
-    display:block;
+    width: 500px;
     margin-left:10px;
-    margin-right:50px;
 }
 
 
@@ -41,17 +50,18 @@ body {
 | Caroussel |
  \========*/
 .caroussel{
-    z-index: 0;
-    width: 90%;
+    display: flex;
     margin: auto;
     position: fixed;
     bottom: 0;
     margin-bottom: 100px;
+    width:100%;
 }
 .slideshow{
-    margin: auto;
+    justify-content: center;
     height: 200px;
     display:flex;
+    width:100%;
 }
 .caroussel-picture{
     position:relative;
@@ -63,8 +73,8 @@ body {
     transition: all 0.2s;
 }
 .caroussel-picture:hover{
-    height:400px;
-    top:-200px;
+    height:300px;
+    top:-100px;
     transition: all 0.5s; 
 }
 
@@ -73,16 +83,16 @@ body {
 | Users description |
  \================*/
 .users-desc{
-    z-index: 50000 !important;
-
-    background-color:rgb(12, 5, 5) ;
+    z-index: 2;
     overflow:visible;
-    position: fixed;
+    position: absolute;
+
+    background-color:rgb(12, 5, 5);
     width:100%;
-    display: flex;
+    display:flex;
     flex-direction: row;
-    bottom:0;
-    height:100px;
+    bottom:-505px;
+    height:580px;
     justify-content: space-around;
 }
 .user-desc{
@@ -91,11 +101,37 @@ body {
     border:2px black solid;
     border-radius: 20px 20px 0px 0px;
     text-align: center;
-    background-color: rgb(12, 5, 5);
+    background-color: rgb(14, 6, 6);
     width: 28%;
 
     transition: bottom 0.2s;
 }
+.user-desc-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-desc-header h1{
+    margin-left: 30px;
+    color: var(--title-color);
+}
+.user-desc-header span{
+    margin: 10px;
+    margin-right: 20px;
+    padding:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color:rgb(31, 16, 16); 
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+.user-desc-header span:hover{
+    box-shadow: 0px 5px 5px black;
+    transition: all 0.1s;
+}
+
 #desc1:hover {
     bottom:500px;
     transition: bottom 0.5s;
@@ -111,6 +147,7 @@ body {
 .user-desc h1 {
     padding-top: 5px;
     padding-bottom: 5px;
+    color: var(--title-color);
 }
 .user-desc p {
     padding-bottom: 20px;
