@@ -1,0 +1,61 @@
+/* background: linear-gradient(180deg, rgb(10, 4, 4), 90%, gray); */
+
+
+:root{
+}
+
+* {
+    padding: 0;
+    margin:0;
+}
+
+body {
+    background-color: rgb(10, 4, 4);
+}
+
+html, body, main {
+    height:100%;
+    width:100%;
+}
+
+.background-logo {
+    z-index: -1;
+    position:fixed;
+    top:0;
+    width: 100%;
+}
+
+
+.description-container{
+    display:flex;
+    background-color: rgb(37, 30, 30);
+    color:lightgray;
+    height:35px;
+    width:96%;
+    margin:2%;
+    border-radius: 5px;
+    margin-bottom:20px;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    align-items: center;
+}
+
+.description-container h3 {
+    padding: 5px 0px;
+    margin-bottom: 10px;
+}
+.description-container p {
+    margin: 2%;
+    font-size:large;
+}
+
+section {
+    background: linear-gradient(180deg, rgb(10, 4, 4), 30%, gray);
+}
+
+
+nav {
+    position:fixed;
+}
