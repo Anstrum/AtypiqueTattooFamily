@@ -18,11 +18,28 @@ html, body, main {
     width:100%;
 }
 
+html {
+    display:flex;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+    max-width: 600px;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
 .background-logo {
+    display: flex;
     z-index: -1;
     position:fixed;
     top:0;
-    width: 100%;
+    max-height: 30%;
 }
 
 
@@ -46,9 +63,27 @@ html, body, main {
     padding: 5px 0px;
     margin-bottom: 10px;
 }
+.description-container h4 {
+    padding-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    color:white;
+}
 .description-container p {
     margin: 2%;
     font-size:large;
+}
+.description-qrcode-container {
+    width: 100%;
+}
+
+.description-qrcode {
+    padding:8px;
+    border-radius: 8px;
+    background-color: rgb(10, 4, 4);
+    width:50%;
+    margin:0% 25%;
+    margin-top: 10px;
 }
 
 section {
