@@ -10,13 +10,21 @@ descriptionContainer3.addEventListener("click", () => manageExtend(descriptionCo
 
 function manageExtend(target)
 {
-    descriptionContainer1.style.height = "35px"
-    descriptionContainer2.style.height = "35px"
-    descriptionContainer3.style.height = "35px"
-
-    descriptionContainer1.style.transition = "all 0.3s"
-    descriptionContainer2.style.transition = "all 0.3s"
-    descriptionContainer3.style.transition = "all 0.3s"
+    if(target !== descriptionContainer1)
+    {
+        descriptionContainer1.style.height = "35px"
+        descriptionContainer1.style.transition = "all 0.3s"
+    }
+    if(target !== descriptionContainer2)
+    {
+        descriptionContainer2.style.height = "35px"
+        descriptionContainer2.style.transition = "all 0.3s"
+    }
+    if(target !== descriptionContainer3)
+    {
+        descriptionContainer3.style.height = "35px"
+        descriptionContainer3.style.transition = "all 0.3s"
+    }
 
     if(target.offsetHeight != 35)
     {
@@ -25,7 +33,7 @@ function manageExtend(target)
     }
     else
     {
-        target.style.height = "70%"
+        target.style.height = "auto"
         target.style.transition = "all 0.3s"
     }
 }
